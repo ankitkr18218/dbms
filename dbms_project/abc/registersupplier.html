@@ -1,0 +1,72 @@
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+body {
+  background-image: url({{ url_for ('static', filename = 'register1.jpg') }});
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
+<div class="container">
+
+    <h2 style="color:white;">
+        REGISTER FOR SUPPLIER
+        <br>
+    </h2>
+    <h3 style="color:white;">
+        Your supplier id will be {{new_suppid}}. Keep It Remember.  Happy selling!!!
+    <br>
+        <br>
+    </h3>
+    <form method="POST" action="">
+        <label style="color:white;">First Name:</label><br>
+        <input type="text" name="name" required/>
+        <br>
+        <br>
+        <label style="color:white;">Surname:</label><br>
+        <input type="text" name="surname"/>
+        <br>
+        <br>
+        <label style="color:white;">Adhaar Number:</label><br>
+        <input type="text" name="adharnumber" required/>
+        <br>
+        <br>
+        <label style="color:white;">Licence Number:</label><br>
+        <input type="text" name="licnumber" required/>
+        <br>
+        <br>
+        <label style="color:white;">Owner address:</label><br>
+        <input type="text" name="owneraddress" required/>
+        <br>
+        <br>
+        <label style="color:white;">Shop address:</label><br>
+        <input type="text" name="shopaddress" required/>
+        <br>
+        <br>
+        <label style="color:white;">Contact Number:</label><br>
+        <input type="text" name="number" required/>
+        <br>
+        <br>
+        <label style="color:white;">Email:</label><br>
+        <input type="email" name="email" required/>
+        <br>
+        <br>
+        <label style="color:white;">City servable:</label><br>
+        <input type="text" name="cityserve" required/>
+        <br>
+        <br>
+        <label style="color:white;">password:</label><br>
+        <input type="password" name="password">
+        <br>
+        <br>
+                    <input type="submit">
+
+    </form>
+    </div>
+
+{% endblock %}

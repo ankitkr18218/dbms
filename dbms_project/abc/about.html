@@ -1,0 +1,29 @@
+﻿{% extends "layout.html" %}
+{% block body %}
+
+<html>
+<head>
+	<title>About-us Page</title>
+ <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/about.css') }}">
+</head>
+<body>
+	<div class="container">
+		<div class="about">
+			<div class="text">
+				<h1>About Liquor’s Castle</h1>
+			</div>
+		</div>
+		<div class="content">
+			<p>In the present, quickly changing business conditions when everything is being digitalized, be it shopping, banking, all kinds of online money transactions, entrance exam preparation, to make one’s business more profitable, they need to come online as it makes your products more accessible to customers.<br>
+				Our target audience is mainly people who are of legal age and consume alcohol (legal age of alcohol consumption varies across states in India). However, our project also allows the supplier(shop-owner) to regulate his stocks and sales.<br><br> Our project also ensures that no-one of illegal age is buying alcohol, by verifying their age through a proper document (identity proof document), here comes the role of government. The government can view which supplier agency needs license renewal and are selling things illegally also.
+
+<br><br><br>The database can be used to do competitive analysis with other suppliers and also with oneself to see what is the percentage change in supply from the last period
+				<br><br>
+			<h3>Community plays an integral role in our project, We as a community believe in smart -responsible drinking, and avoid drunk-driving at all costs.</h3>>
+</p>
+		</div>
+		</div>
+		<footer><a href="/contact" class="float-right btn btn-sm btn-primary">CONTACT US</a></footer>
+</body>
+</html>
+{% endblock %}

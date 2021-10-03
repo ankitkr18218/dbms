@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+{% block body %}
+<body style="background : url({{link}});
+    background-repeat: no-repeat;
+  background-position: bottom right;
+  background-attachment: fixed;
+  background-size: 40% 90%;">
+<div class="container">
+
+{% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+    {% endfor %}
+<h2>
+    Make Your Order
+</h2>
+    <h4>
+    Item Name -: {{name}}
+</h4>
+     <h4>
+    Item Price -: {{price}}
+</h4>
+<form method="POST" id=form1>
+
+    <label >Address:</label><br>
+    <input type="text" name="address" />
+    <br>
+    <br>
+    <label >PhoneNo:</label><br>
+    <input type="tel" name="phone">
+    <br>
+    <br>
+    <label >Qty:</label><br>
+    <input min="1" type="number" name="quantity" value="1">
+
+
+</form>
+<input type="button" onclick="location.href='/tranaction/{{item}}/{{user}}/{{price}}/{{order}}/'" value="submit">
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    {% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+    {% endfor %}
+    <div class="row">
+        <table class="table table-sm">
+            <thead>
+            <th>orderid</th>
+            <th>itemid</th>
+            <th>customerid</th>
+            <th>quantity</th>
+            <th>itemprice</th>
+            <th>ordered date</th>
+            <th>status</th>
+            <th>rejectitem</th>
+            </thead>
+            <tbody>
+            {% for i in result %}
+                <tr>
+                    <td>{{i[0]}}</td>
+                    <td>{{i[1]}}</td>
+                    <td>{{i[2]}}</td>
+                    <td>{{i[3]}}</td>
+                    <td></td>
+                    <td>{{i[5]}}</td>
+                    <td></td>
+                    <td><a href="/rejectedorder/{{i[0]}}/{{i[1]}}/{{i[2]}}/" > reject</a></td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}

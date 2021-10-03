@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+body {
+  background-image: url({{ url_for ('static', filename = 'supplierchange.jpg') }});
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
+<div class="container">
+
+    <h2 style="color:white;">
+        UPDATE THE PRODUCT {{itemid}} as Supplier ID ={{username}}
+        <br>
+    </h2>
+    <form method="POST" action="">
+        <label style="color:white;">Item Name:</label><br>
+        <input type="text" value={{itemname}}  name="name" required/>
+        <br>
+        <br>
+        <label style="color:white;">Item Type:</label><br>
+        <input type="text" value={{itemtype}} name="itemtype" required/>
+        <br>
+        <br>
+        <label style="color:white;">Price:</label><br>
+        <input type="text" value={{price}} name="price" required/>
+        <br>
+        <br>
+        <label style="color:white;">Item Place:</label><br>
+        <input type="text" value = {{place}} name="place" required/>
+        <br>
+        <br>
+        <label style="color:white;">Available:</label><br>
+        <input type="text" value={{avalble}} name="aval" required/>
+        <br>
+        <br>
+        <label style="color:white;">Link:</label><br>
+        <input type="text" value={{link}} name="link" required/>
+        <br>
+        <br>
+                    <input type="submit">
+
+    </form>
+    </div>
+
+{% endblock %}

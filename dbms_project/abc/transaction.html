@@ -1,0 +1,28 @@
+
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container">
+
+{% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+    {% endfor %}
+<h2>
+    PAY FOR YOUR ORDER
+</h2>
+
+<form method="POST" action="">
+    <label style="color:white;">account ID:</label><br>
+    <input type="text" name="account" required/>
+    <br>
+    <br>
+    <label style="color:white;">payable money:</label><br>
+
+    <br>
+    <br>
+
+
+</form>
+    </div>
+</body>
+{% endblock %}

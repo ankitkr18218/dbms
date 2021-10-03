@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+<div class="container">
+  <row class="row">
+    {% for i in result %}
+
+    <div class="col-md-4">
+      <img src="{{ i[7]}}" width="250" height="200" alt="">
+      <div class="card-body">
+
+      </div>
+      <div class="card-footer">
+        <a class="float-left"> {{i[1]}},Rs-{{i[6]}}</a>
+        <a href="/supplierchange/{{i[0]}}/{{username}}/" >Update</a>
+
+      </div>
+    </div>
+      {% endfor %}
+      <a href="/supplieradd/{{username}}/" >Add new product</a>
+          <br />
+  </row>
+
+
+</div>
+{% endblock %}

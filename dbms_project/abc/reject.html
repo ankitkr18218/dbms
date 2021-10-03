@@ -1,0 +1,36 @@
+
+{% extends "layout.html" %}
+{% block body %}
+<body style="background : url({{link}});
+    background-repeat: no-repeat;
+  background-position: bottom right;
+  background-attachment: fixed;
+  background-size: 40% 90%;">
+<div class="container">
+
+{% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+    {% endfor %}
+<h2>
+    give us your valuable reason
+</h2>
+    <h4>
+    Item id -: {{name}}
+</h4>
+     <h4>
+    customer id -: {{customer}}
+</h4>
+<form method="POST">
+
+    <label >reason</label><br>
+    <input type="text" name="reason" />
+
+    <br>
+    <br>
+
+                <input type="submit">
+
+</form>
+    </div>
+</body>
+{% endblock %}

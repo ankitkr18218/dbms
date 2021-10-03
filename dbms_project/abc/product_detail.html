@@ -1,0 +1,33 @@
+
+<html>
+<head>
+<style>
+div.jumbotron {
+  color: black;
+text-align: left;
+}
+</style>
+</head>
+<body style="background : url({{link}});
+    background-repeat: no-repeat;
+  background-position: bottom right;
+  background-attachment: fixed;
+  background-size: 40% 90%;">
+
+<div class="jumbotron">
+
+  <h1 style="text-align:left">{{itemname}}</h1>
+  <p>Item ID : {{itemid}}</p>
+  <p>Type of liqour: {{itemtype}}</p>
+  <p>Price : Rs. {{price}} </p>
+  <p>Place :{{place}}</p>
+  <p>Available Status: {{avalble}}</p>
+  <p>DISCOUNT: {{discount}}</p>
+  <a href="/addtocart/{{itemid}}/{{username}}/{{password}}/{{price}}/{{itemname}}" > <button>Add to cart</button></a>
+  <a href="/order/{{itemid}}/{{userid}}/" > <button>order</button></a>
+
+
+
+</div>
+</body>
+</html>

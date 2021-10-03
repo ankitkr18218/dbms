@@ -1,0 +1,35 @@
+
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    {% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+    {% endfor %}
+    <div class="row">
+        <table class="table table-sm">
+            <thead>
+            <th>itemid</th>
+            <th>customerid</th>
+            <th>itemname</th>
+            <th>itemprice</th>
+            <th>delete</th>
+            <th>orderitem</th>
+            </thead>
+            <tbody>
+            {% for i in result1 %}
+                <tr>
+                    <td>{{i[0]}}</td>
+                    <td>{{i[1]}}</td>
+                    <td>{{i[2]}}</td>
+                    <td>RS{{i[3]}}</td>
+                    <td><a href="/remove/{{i[0]}}">remove</a>  </td>
+                    <td><a href="/order/{{i[0]}}/{{i[1]}}/" > order</a></td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}

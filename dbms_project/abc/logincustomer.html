@@ -1,0 +1,36 @@
+
+{% extends "layout.html" %}
+{% block body %}
+
+<style>
+body {
+  background-image: url({{ url_for ('static', filename = 'login1.jpg') }});
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
+<div class="container">
+
+{% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+    {% endfor %}
+<h2 style="color:white;">
+    LOGIN FOR CUSTOMER
+</h2>
+
+<form method="POST" action="">
+    <label style="color:white;">Customer ID:</label><br>
+    <input type="text" name="cusid" required/>
+    <br>
+    <br>
+    <label style="color:white;">password:</label><br>
+    <input type="password" name="password">
+    <br>
+    <br>
+                <input type="submit">
+
+</form>
+    </div>
+{% endblock %}

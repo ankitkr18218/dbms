@@ -1,0 +1,54 @@
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+body {
+  background-image: url({{ url_for ('static', filename = 'supplieradd1.jpg') }});
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
+<div class="container">
+
+    <h2 style="color:white;">
+        ADD PRODUCT as Supplier ID = {{username}}
+        <br>
+    </h2>
+    <form method="POST" action="">
+        <label style="color:white;">Item ID:</label><br>
+        <input type="text" name="itemid" required/>
+        <br>
+        <br>
+        <label style="color:white;">Item Name:</label><br>
+        <input type="text"  name="name" required/>
+        <br>
+        <br>
+        <label style="color:white;">Item Type:</label><br>
+        <input type="text" name="itemtype" required/>
+        <br>
+        <br>
+        <label style="color:white;">Price:</label><br>
+        <input type="text"  name="price" required/>
+        <br>
+        <br>
+        <label style="color:white;">Item Place:</label><br>
+        <input type="text"  name="place" required/>
+        <br>
+        <br>
+        <label style="color:white;">Available:</label><br>
+        <input type="text"  name="aval" required/>
+        <br>
+        <br>
+        <label style="color:white;">Link:</label><br>
+        <input type="text" name="link" required/>
+        <br>
+        <br>
+             <input type="submit">
+    </form>
+    </div>
+
+{% endblock %}

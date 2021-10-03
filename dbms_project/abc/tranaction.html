@@ -1,0 +1,44 @@
+
+{% extends "layout.html" %}
+{% block body %}
+
+<style>
+body {
+  background-image: url({{ url_for ('static', filename = 'login1.jpg') }});
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
+<div class="container">
+
+    <h4 style="color:white;">
+  {% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+    {% endfor %}
+</h4>
+
+<h2 style="color:white;">
+    Pay here.
+    Payment only through credit card, debit card and paytm is accepted.
+</h2>
+
+<form method="POST" action="">
+    <label style="color:white;">account ID:</label><br>
+    <input type="text" name="account" required/>
+    <br>
+    <br>
+     <label style="color:white;">payment mode:</label><br>
+    <input type="text" name="mode" required/>
+    <br>
+    <br>
+     <label style="color:white;">payable money: {{ totalprice}}</label><br>
+
+
+    <br>
+    <br>
+    <input type="submit">
+</form>
+    </div>
+{% endblock %}
